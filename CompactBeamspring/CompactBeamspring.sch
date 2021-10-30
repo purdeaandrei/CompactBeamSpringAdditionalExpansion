@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Compact Beamspring Controller Based on TH Xwhatsit"
 Date "2020-01-31"
-Rev "1.3"
+Rev "1.4"
 Comp "Rainy Day Plans"
 Comment1 ""
 Comment2 ""
@@ -724,17 +724,17 @@ HEADER3
 Text GLabel 7125 6100 2    50   BiDi ~ 0
 HEADER4
 Text GLabel 7900 3575 0    50   BiDi ~ 0
-HEADER1
+HEADER1_LED5
 Text GLabel 7900 3675 0    50   BiDi ~ 0
-HEADER2
+HEADER2_LED4
 Text GLabel 7900 2775 0    50   BiDi ~ 0
 HEADER3
 Text GLabel 7900 2875 0    50   BiDi ~ 0
 HEADER4
 Text GLabel 6625 6200 0    50   BiDi ~ 0
-HEADER2
+HEADER2_LED4
 Text GLabel 6625 6100 0    50   BiDi ~ 0
-HEADER1
+HEADER1_LED5
 Text Notes 3950 7750 0    50   ~ 0
 Copyright Rainy Day Plans.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.2.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.2. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for applicable\nconditions
 Text GLabel 2675 5075 0    50   Input ~ 0
@@ -890,12 +890,12 @@ Wire Wire Line
 $Comp
 L power:GNDD #PWR0107
 U 1 1 5F3A2D72
-P 10225 4175
-F 0 "#PWR0107" H 10225 3925 50  0001 C CNN
-F 1 "GNDD" H 10325 4050 50  0000 R CNN
-F 2 "" H 10225 4175 50  0001 C CNN
-F 3 "" H 10225 4175 50  0001 C CNN
-	1    10225 4175
+P 10475 4250
+F 0 "#PWR0107" H 10475 4000 50  0001 C CNN
+F 1 "GNDD" H 10575 4125 50  0000 R CNN
+F 2 "" H 10475 4250 50  0001 C CNN
+F 3 "" H 10475 4250 50  0001 C CNN
+	1    10475 4250
 	1    0    0    -1  
 $EndComp
 Text Notes 8075 4850 0    50   ~ 0
@@ -979,17 +979,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 4275 2250 4300
 $Comp
-L Device:Net-Tie_3 NT1
-U 1 1 5F6D07D8
-P 10300 2875
-F 0 "NT1" H 10375 2800 50  0000 C CNN
-F 1 "Net-Tie_3" H 10300 2685 50  0000 C CNN
-F 2 "NetTie:NetTie-3_THT_Pad0.3mm" H 10300 2875 50  0001 C CNN
-F 3 "~" H 10300 2875 50  0001 C CNN
-	1    10300 2875
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:Net-Tie_3 NT2
 U 1 1 5F6D1B28
 P 10300 3075
@@ -1008,37 +997,14 @@ Connection ~ 9625 2875
 Wire Wire Line
 	9625 2875 9500 2875
 $Comp
-L Device:R R6
-U 1 1 5F3A43C9
-P 10225 3725
-F 0 "R6" H 10295 3771 50  0000 L CNN
-F 1 "Not Mounted" H 10295 3680 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10155 3725 50  0001 C CNN
-F 3 "~" H 10225 3725 50  0001 C CNN
-	1    10225 3725
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R7
 U 1 1 5F3A4C74
-P 10225 4025
-F 0 "R7" H 10295 4071 50  0000 L CNN
-F 1 "Not Mounted" H 10295 3980 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10155 4025 50  0001 C CNN
-F 3 "~" H 10225 4025 50  0001 C CNN
-	1    10225 4025
-	1    0    0    -1  
-$EndComp
-Connection ~ 10225 3875
-$Comp
-L power:+5VD #PWR04
-U 1 1 5F3A9745
-P 10225 3575
-F 0 "#PWR04" H 10225 3425 50  0001 C CNN
-F 1 "+5VD" H 10150 3750 50  0000 L CNN
-F 2 "" H 10225 3575 50  0001 C CNN
-F 3 "" H 10225 3575 50  0001 C CNN
-	1    10225 3575
+P 10475 4100
+F 0 "R7" H 10545 4146 50  0000 L CNN
+F 1 "Not Mounted" H 10545 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10405 4100 50  0001 C CNN
+F 3 "~" H 10475 4100 50  0001 C CNN
+	1    10475 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1087,10 +1053,6 @@ F 3 "" H 9950 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9950 4300 9950 3675
-NoConn ~ 9500 3175
-NoConn ~ 9500 3275
-NoConn ~ 7900 3775
-NoConn ~ 7900 3875
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5F542CCD
@@ -1104,8 +1066,6 @@ F 3 "~" H 7450 5050 50  0001 C CNN
 $EndComp
 Text GLabel 7250 5050 0    50   Output ~ 0
 RST
-Wire Wire Line
-	10200 2875 9925 2875
 Connection ~ 9925 2875
 $Comp
 L power:GND #PWR012
@@ -1118,8 +1078,8 @@ F 3 "" H 9925 2875 50  0001 C CNN
 	1    9925 2875
 	1    0    0    -1  
 $EndComp
-Text Notes 9850 2500 0    50   ~ 0
-STARPOINT POWER\nCONNECTIONS AT\nCONTROLLER
+Text Notes 10100 2575 0    50   ~ 0
+STARPOINT POWER\nCONNECTIONS AT\nCONTROLLER\n\nEDIT gnd merged
 $Comp
 L power:GND #PWR08
 U 1 1 5F54D22D
@@ -1261,8 +1221,6 @@ Connection ~ 7900 2975
 Wire Wire Line
 	9500 3075 10200 3075
 Wire Wire Line
-	9500 3875 10225 3875
-Wire Wire Line
 	9500 3675 9950 3675
 Wire Wire Line
 	9625 2875 9925 2875
@@ -1272,4 +1230,134 @@ Wire Wire Line
 	7375 2425 7375 2975
 Wire Wire Line
 	7375 2425 9625 2425
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J4
+U 1 1 6107AC92
+P 10175 5900
+F 0 "J4" H 10225 6317 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 10225 6226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 10175 5900 50  0001 C CNN
+F 3 "~" H 10175 5900 50  0001 C CNN
+	1    10175 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9925 2875 10250 2875
+Wire Wire Line
+	10250 2875 10250 2775
+Wire Wire Line
+	10250 2775 10400 2775
+Connection ~ 10250 2875
+Wire Wire Line
+	10250 2875 10400 2875
+$Comp
+L power:+5VD #PWR04
+U 1 1 61088086
+P 9975 5700
+F 0 "#PWR04" H 9975 5550 50  0001 C CNN
+F 1 "+5VD" V 9990 5828 50  0000 L CNN
+F 2 "" H 9975 5700 50  0001 C CNN
+F 3 "" H 9975 5700 50  0001 C CNN
+	1    9975 5700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9500 3275 2    50   Output ~ 0
+LED1
+Text GLabel 10475 5700 2    50   Input ~ 0
+LED1
+Text GLabel 7900 3775 0    50   Output ~ 0
+LED2
+Text GLabel 7900 3875 0    50   Output ~ 0
+LED3
+Text GLabel 9975 5800 0    50   Input ~ 0
+LED2
+Text GLabel 10475 5800 2    50   Input ~ 0
+LED3
+Text GLabel 9975 5900 0    50   BiDi ~ 0
+HEADER2_LED4
+Text GLabel 10475 5900 2    50   BiDi ~ 0
+HEADER1_LED5
+Text GLabel 10725 3875 2    50   BiDi ~ 0
+BUTTON1
+Text GLabel 9975 6000 0    50   BiDi ~ 0
+BUTTON1
+Text GLabel 10000 3675 2    50   BiDi ~ 0
+BUTTON2
+Text GLabel 10475 6000 2    50   BiDi ~ 0
+BUTTON2
+Text GLabel 9500 3175 2    50   BiDi ~ 0
+BUTTON3
+Text GLabel 9975 6100 0    50   BiDi ~ 0
+BUTTON3
+$Comp
+L Device:R R6
+U 1 1 610C2CCF
+P 10475 3600
+F 0 "R6" H 10545 3646 50  0000 L CNN
+F 1 "Not Mounted" H 10545 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10405 3600 50  0001 C CNN
+F 3 "~" H 10475 3600 50  0001 C CNN
+	1    10475 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0103
+U 1 1 610D5B38
+P 10525 6175
+F 0 "#PWR0103" H 10525 5925 50  0001 C CNN
+F 1 "GNDD" H 10625 6050 50  0000 R CNN
+F 2 "" H 10525 6175 50  0001 C CNN
+F 3 "" H 10525 6175 50  0001 C CNN
+	1    10525 6175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10475 6100 10525 6100
+Wire Wire Line
+	10525 6100 10525 6175
+Wire Wire Line
+	10000 3675 9950 3675
+Connection ~ 9950 3675
+Wire Wire Line
+	9500 3875 10475 3875
+Wire Wire Line
+	10475 3750 10475 3875
+Connection ~ 10475 3875
+Wire Wire Line
+	10475 3875 10725 3875
+Wire Wire Line
+	10475 3875 10475 3950
+$Comp
+L power:+5VD #PWR0110
+U 1 1 6112E48C
+P 10475 3450
+F 0 "#PWR0110" H 10475 3300 50  0001 C CNN
+F 1 "+5VD" H 10490 3578 50  0000 L CNN
+F 2 "" H 10475 3450 50  0001 C CNN
+F 3 "" H 10475 3450 50  0001 C CNN
+	1    10475 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 611D25F7
+P 8275 6100
+F 0 "H2" H 8375 6146 50  0000 L CNN
+F 1 "ToolingHole" H 8375 6055 50  0000 L CNN
+F 2 "TH-XWhatsIt:tooling_hole" H 8275 6100 50  0001 C CNN
+F 3 "~" H 8275 6100 50  0001 C CNN
+	1    8275 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 611DB711
+P 8100 5850
+F 0 "H3" H 8200 5896 50  0000 L CNN
+F 1 "ToolingHole" H 8200 5805 50  0000 L CNN
+F 2 "TH-XWhatsIt:tooling_hole" H 8100 5850 50  0001 C CNN
+F 3 "~" H 8100 5850 50  0001 C CNN
+	1    8100 5850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -74,3 +74,12 @@ Oct 30, 2021
             Pro Micro 3D model: added pins
             Solenoid header, use 90-degree 3d model
             Added rendered images, tweaked readme
+
+August 3, 2021
+    user: purdeaandrei
+        done:
+            Revision 1.4
+            Added extra expansion header, mainly for IBM 3278 with extra leds and buttons, board is now wider.
+            Merged analog and digital grounds.
+            This revision now only has the P2 panelisation.
+            Added some more vias.
