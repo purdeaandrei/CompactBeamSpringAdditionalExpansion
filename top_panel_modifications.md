@@ -38,9 +38,37 @@ Note: if you would like to see the raw spreadsheet we used to calculate the resi
 
 #### Components
 
-TODO
+* 10-pin ribbon cable with 1.27mm pin pitch. We recommend using the single-color kind, that has only one edge wire with a different color. For example all-grey with pin "1" marked with red.
+* 2x5-pin female IDC connector with 2.54mm pin pitch
+
+Note: when crimping the IDC connector onto the ribbon cable, make sure to respect the pin 1 marker, which is usually a triangle/arrow showing which side pin 1 is on.
 
 #### Wiring
 
-TODO
+| Ribbon pin index | Ribbon wire color | Controller net name | GPIO | Connect to                                             |
+|------------------|-------------------|---------------------|------|--------------------------------------------------------|
+| 1                | Red               | +5VD                |      | "+24V" pin on led board, which is the **common anode** |
+| 2                | Grey              | LED1                | PF5  | "5" on PCB, The **left-most** led cathode              |
+| 3                | Grey              | LED2                | PB4  | "4" on PCB, The second led cathode from the left       |
+| 4                | Grey              | LED3                | PB5  | "3" on PCB                                             |
+| 5                | Grey              | HEADER2_LED4        | PE6  | "2" on PCB                                             |
+| 6                | Grey              | HEADER1_LED5        | PD7  | "1" on PCB, The **right-most** led cathode             |
+| 7                | Grey              | BUTTON1             | PB6  | The **left-most** push buttons's middle-left terminal  |
+| 8                | Grey              | BUTTON2             | PB3  | The middle push buttons's middle-left terminal         |
+| 9                | Grey              | BUTTON3             | PF4  | The **right-most** push buttons's middle-left terminal |
+| 10               | Grey              | GND                 |      | The bottom-left pins of **all 3 push-buttons**         |
 
+Here is a futher illustrated image, explaining how to connecto the wires:
+
+![How to connect](images/how_to_connect_to_top_panel.png)
+
+Here is an example of how to provide some strain relief to the ribbon cable using some heatshring tubing, and a cable tie:
+
+![Example strain relief](images/example_strain_relief.jpg)
+
+#### Connecting to the controller
+
+Always make sure the pin "1" of the ribbon cable (the side marked with red) is lined up with pin "1" on controller.
+Note: pin 1 on the controller is the only pad that is square, and it's also marked differently on the silkscreen.
+
+![How to connect](images/how_to_connect_to_controller.jpg)
