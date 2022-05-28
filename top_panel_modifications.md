@@ -17,7 +17,7 @@ Note: for more details about the original state of the board, please see [here](
 ### Led Resistors
 
 The original led board was designed to power the leds at 24 volts, so using the original current limiting resistors
-at 5V which is what our controller is running at, would make the leds to dim. In order to have the leds light at
+at 5V, which is what our controller is running at, would make the leds too dim. In order to have the leds light at
 a similar brightness as the original working condition of the keyboard, the resistors have to be replaced.
 
 The following values have been calculated as recommended replacements. If you want to use these values
@@ -32,7 +32,7 @@ in this table. Resistors are listed left-to-right:
 | Yellow    | 2            | 2.2 kohm                 | 270 ohm                       |
 | Green     | 1            | 1.1 kohm                 | 120 ohm                       |
 
-Note: if you would like to see the raw spreadsheet we used to calculate the resistor values please see [here(.ods)](images/3278 top panel led current limiting resistors.ods) or [here(.pdf)](3278 top panel led current limiting resistors.pdf)
+Note: if you would like to see the raw spreadsheet we used to calculate the resistor values please see [here(.ods)](images/3278%20top%20panel%20led%20current%20limiting%20resistors.ods) or [here(.pdf)](images/3278%20top%20panel%20led%20current%20limiting%20resistors.pdf)
 
 ### New wire harness (using a ribbon cable)
 
