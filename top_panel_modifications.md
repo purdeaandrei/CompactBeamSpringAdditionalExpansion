@@ -39,7 +39,14 @@ Note: if you would like to see the raw spreadsheet we used to calculate the resi
 #### Components
 
 * 10-pin ribbon cable with 1.27mm pin pitch. We recommend using the single-color kind, that has only one edge wire with a different color. For example all-grey with pin "1" marked with red.
-* 2x5-pin female IDC connector with 2.54mm pin pitch
+  * Example sources:
+    * [tme](https://www.tme.eu/en/details/ds1057-10a282r/ribbon-cables-single-color/connfly/ds1057-10a282r-30-5/)
+    * ebay, search "10 pin ribbon cable 1.27mm"
+* 2x5-pin female IDC connector with 2.54mm pin pitch, and 1.27mm ribbon cable pitch:
+  * Example sources:
+    * [tme](https://www.tme.eu/en/details/ds1016-10masibb/idc-connectors/connfly/ds1016-10ma2bb/)
+    * ebay, search "2x5 10 pin idc female"
+* You also have the option to buy pre-crimped ribbon cables, and cut off one end, however you have less control over the length of the resulting cable harness.
 
 Note: when crimping the IDC connector onto the ribbon cable, make sure to respect the pin 1 marker, which is usually a triangle/arrow showing which side pin 1 is on.
 
@@ -62,7 +69,7 @@ Here is a futher illustrated image, explaining how to connecto the wires:
 
 ![How to connect](images/how_to_connect_to_top_panel.png)
 
-Here is an example of how to provide some strain relief to the ribbon cable using some heatshring tubing, and a cable tie:
+Here is an example of how to provide some strain relief to the ribbon cable using some heatshrink tubing, and a cable tie:
 
 ![Example strain relief](images/example_strain_relief.jpg)
 
