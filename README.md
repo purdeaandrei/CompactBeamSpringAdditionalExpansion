@@ -8,6 +8,9 @@ especially for 3278 A02 / 3279 2C keyboards with a top panel, sporting additiona
 non-capacitive push buttons.
 See https://github.com/purdeaandrei/CompactBeamSpring/issues/1 for some details about these keyboards.
 
+See [top_panel_modifications.md](top_panel_modifications.md) for instructions on how to connect this controller
+to the top panel of your 3278 A02 / 3279 2C keyboard.
+
 ## Images
 
 ![Top of the controller board](images/top.png)
